@@ -34,9 +34,11 @@ regex6 ='\=[*\w]*' #all values
 result6 = re.findall(regex6, expression, re.DOTALL)
 
 #printing parameters present in the url
-    print("parameters present in the url: ", result5[0][:-1], result5[1][:-1],result5[2][:-1])
+for params in result5:
+    print("parameters present in the url: ", params[:-1])
 #printing the values present in the url
-print("values present in the url: ", result6[0][1:],result6[1][1:],result6[2][1:])
+for vals in result6:
+    print("values present in the url: ", vals[-1:])
 
 #only equal sign to help identify how many of them are present in the url
 equalsign = '='
